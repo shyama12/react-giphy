@@ -7,6 +7,7 @@ import GifList from './gif_list';
 class App extends Component {
   constructor(props) {
     super(props);
+
     this.state = {
       gifs: [{ id: "PZinYdZrJsavejA8al" }, { id: "MJp9HJBMGVfLps9zsN" }],
       selectedGifId: "PZinYdZrJsavejA8al"
@@ -21,7 +22,6 @@ class App extends Component {
       rating: 'g',
       limit: 10
     }, (err, res) => {
-      console.log(res);
       this.setState({
         gifs: res.data,
         selectedGifId: res.data[0].id
