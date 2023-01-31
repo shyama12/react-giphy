@@ -1,3 +1,4 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import React, { Component } from 'react';
 import giphy from 'giphy-api';
 import SearchBar from './search_bar';
@@ -9,11 +10,11 @@ class App extends Component {
     super(props);
 
     this.state = {
-      gifs: [{ id: "PZinYdZrJsavejA8al" }, { id: "MJp9HJBMGVfLps9zsN" }],
-      selectedGifId: "PZinYdZrJsavejA8al"
+      gifs: [],
+      selectedGifId: null
     };
 
-    this.search("homer thinking");
+    // this.search("homer thinking");
   }
 
   search = (query) => {
